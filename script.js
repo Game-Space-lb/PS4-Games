@@ -223,3 +223,42 @@ function selectStorage(selectedStorage) {
     changeStorageTo2tb();
   }
 }
+
+
+// Smart Search Function (by name OR max storage filter)
+document.getElementById('searchBar').addEventListener('keyup', function() {
+  let query = this.value.toLowerCase().trim();
+  let games = document.querySelectorAll('.game');
+
+  // If search bar is empty → show all games
+  if (query === "") {
+    games.forEach(function(game) {
+      game.style.display = "inline-block";
+    });
+    return; // stop here
+  }
+
+  games.forEach(function(game) {
+    let gameName = game.querySelector('.info p:nth-child(1)').textContent.toLowerCase();
+    let storageInfo = game.querySelector('.info p:nth-child(2)').textContent.toLowerCase();
+    let storageValue = parseFloat(storageInfo.split(" ")[1]); // numeric storage size
+
+    let match = false;
+
+    // If user types text, match by game name
+    if (isNaN(query)) {
+      if (gameName.includes(query)) {
+        match = true;
+      }
+    }
+    // If user types a number, match all games <= that number
+    else {
+      let numberQuery = parseFloat(query);
+      if (!isNaN(storageValue) && storageValue <= numberQuery) {
+        match = true;
+      }
+    }
+
+    game.style.display = match ? "inline-block" : "none";
+  });
+});

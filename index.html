@@ -30,7 +30,7 @@
 
   <!-- Add the GIF here -->
   <div class="playstation-container">
-    <img src="Background.jpg" alt="website picture">
+    <img src="Background.webp" alt="website picture">
   </div>
 
 
@@ -57,6 +57,12 @@
       <button id="sendWhatsApp">Send to WhatsApp</button>
     </div>
   </div>
+
+  <div class="search-container">
+  <input type="text" id="searchBar" placeholder="Search for a game...">
+</div>
+
+
   <div class="games">
     <div class="game">
       <div onclick="selectGame(this)">
@@ -65,6 +71,16 @@
       <div class="info">
         <p>Grand Theft Auto V</p>
         <p>Storage: 50.25 GB</p>
+        <button class="select" onclick="selectGame(this)">Select</button>
+      </div>
+    </div>
+    <div class="game">
+      <div onclick="selectGame(this)">
+        <img src="FC26.webp" alt="FC26">
+      </div>
+      <div class="info">
+        <p>EA SPORTS FC 26 (تعليق عربي)</p>
+        <p>Storage: 66.07 GB</p>
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
@@ -80,7 +96,7 @@
     </div>
     <div class="game">
       <div onclick="selectGame(this)">
-        <img src="Spider-Man.webp" alt="Spider-Man Marvel">
+        <img src="Spider-Man.webp" alt="Marvel's Spider-Man">
       </div>
       <div class="info">
         <p>Marvel's Spider-Man</p>
@@ -188,16 +204,16 @@
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
-    <!-- <div class="game">
+    <div class="game">
       <div onclick="selectGame(this)">
-       <img src="Spider-Man Miles Morales.webp" alt="Spider-Man Miles Morales">
+       <img src="Spider-Man Miles Morales.webp" alt="Marvel's Spider-Man: Miles Morales">
       </div>
       <div class="info">
         <p>Marvel's Spider-Man: Miles Morales</p>
         <p>Storage: 54.37 GB</p>
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
-    </div> -->
+    </div>
     <div class="game">
       <div onclick="selectGame(this)">
         <img src="Cyberpunk 2077.webp" alt="Cyberpunk 2077">
@@ -730,6 +746,16 @@
   </div>
   <div class="game">
     <div onclick="selectGame(this)">
+      <img src="Dragon Ball Z Kakarot.webp" alt="Dragon Ball Z Kakarot">
+    </div>
+    <div class="info">
+      <p>DRAGON BALL Z: KAKAROT</p>
+      <p>Storage: 34.59 GB</p>
+      <button class="select" onclick="selectGame(this)">Select</button>
+    </div>
+  </div>
+  <div class="game">
+    <div onclick="selectGame(this)">
       <img src="Ratchet & Clank.webp" alt="Ratchet & Clank">
     </div>
     <div class="info">
@@ -828,16 +854,6 @@
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
-  <!-- <div class="game">
-    <div onclick="selectGame(this)">
-      <img src="FC24.webp" alt="FC24">
-    </div>
-    <div class="info">
-      <p>EA SPORTS FC 24 (English Subtitles)</p>
-      <p>Storage: 52.68 GB</p>
-      <button class="select" onclick="selectGame(this)">Select</button>
-    </div>
-  </div> -->
   <div class="game">
     <div onclick="selectGame(this)">
       <img src="FIFA 22.webp" alt="FIFA 22">
@@ -885,6 +901,16 @@
     <div class="info">
       <p>Alan Wake</p>
       <p>Storage: 58.92 GB</p>
+      <button class="select" onclick="selectGame(this)">Select</button>
+    </div>
+  </div>
+  <div class="game">
+    <div onclick="selectGame(this)">
+      <img src="Mad Max.webp" alt="Mad Max">
+    </div>
+    <div class="info">
+      <p>Mad Max</p>
+      <p>Storage: 33.59 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>

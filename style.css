@@ -167,6 +167,29 @@ body {
   width: 200px;
 }
 
+.search-container {
+  text-align: center;
+  padding: 15px;
+  background-color: #fff;
+  position: static; /* ✅ ensure it's part of normal flow */
+  z-index: auto;    /* ✅ no overlap */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+
+#searchBar {
+  width: 70%;
+  max-width: 500px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 25px;
+  border: 1px solid #ccc;
+}
+
+
 .alert {
   background-color: #f44336;
   color: white;
