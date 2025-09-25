@@ -262,3 +262,9 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
     game.style.display = match ? "inline-block" : "none";
   });
 });
+
+// Below code is used to hide the preloader screen
+
+window.addEventListener("load", function() {
+  document.getElementById("preloader").style.display = "none";
+});
