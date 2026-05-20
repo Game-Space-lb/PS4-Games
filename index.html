@@ -11,7 +11,8 @@
   <div id="preloader">
     <div class="preloader-div">
       <img src="Game Space.png" alt="Logo" class="logo">
-      <h2>Loading...</h2>
+      <div class="loader-ring"></div>
+      <h2 class="loading-text">Loading<span></span></h2>
     </div>
     
   </div>
@@ -19,7 +20,7 @@
   <div id="storageModal" class="modal">
     <div class="modal-content">
       <h2>Select Your Storage</h2>
-      <p>Please choose the storage capacity you need:</p>
+      <p>Please select your Playstation storage:</p>
       <button onclick="selectStorage(500)">500 GB</button>
       <button onclick="selectStorage(1000)">1 TB</button>
       <button onclick="selectStorage(2000)">2 TB</button>
@@ -66,8 +67,11 @@
   </div>
 
   <div class="search-container">
-  <input type="text" id="searchBar" placeholder="Search for a game...">
-</div>
+    <div class="search-wrapper">
+      <input type="text" id="searchBar" placeholder="Search for a game...">
+      <button id="clearSearch" class="hidden">&times;</button>
+    </div>
+  </div>
 
 
   <div class="games">
@@ -86,8 +90,8 @@
         <img src="FC26.webp" alt="FC26">
       </div>
       <div class="info">
-        <p>EA SPORTS FC 26 (تعليق عربي)</p>
-        <p>Storage: 66.07 GB</p>
+        <p>EA SPORTS FC 26 - (تعليق عربي)</p>
+        <p>Storage: 67.81 GB</p>
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
@@ -96,7 +100,7 @@
         <img src="FC25.webp" alt="FC25">
       </div>
       <div class="info">
-        <p>EA SPORTS FC 25 (تعليق عربي)</p>
+        <p>EA SPORTS FC 25 - (تعليق عربي)</p>
         <p>Storage: 53.34 GB</p>
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
@@ -217,7 +221,7 @@
       </div>
       <div class="info">
         <p>Marvel's Spider-Man: Miles Morales</p>
-        <p>Storage: 54.37 GB</p>
+        <p>Storage: 41.48 GB</p>
         <button class="select" onclick="selectGame(this)">Select</button>
       </div>
     </div>
@@ -537,7 +541,7 @@
     </div>
     <div class="info">
       <p>Call of Duty® Ghosts</p>
-      <p>Storage: 33.78 GB</p>
+      <p>Storage: 31.16 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
@@ -577,7 +581,7 @@
     </div>
     <div class="info">
       <p>Battlefield 4™</p>
-      <p>Storage: 40.29 GB</p>
+      <p>Storage: 34.69 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
@@ -677,7 +681,7 @@
     </div>
     <div class="info">
       <p>Mortal Kombat XL</p>
-      <p>Storage: 41.40.04 GB</p>
+      <p>Storage: 41.40 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
@@ -687,7 +691,7 @@
     </div>
     <div class="info">
       <p>Just Cause 4</p>
-      <p>Storage: 58.67 GB</p>
+      <p>Storage: 43.21 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
@@ -738,6 +742,16 @@
     <div class="info">
       <p>Hello Neighbor</p>
       <p>Storage: 1.99 GB</p>
+      <button class="select" onclick="selectGame(this)">Select</button>
+    </div>
+  </div>
+  <div class="game">
+    <div onclick="selectGame(this)">
+      <img src="Gang Beasts.webp" alt="Gang Beasts">
+    </div>
+    <div class="info">
+      <p>Gang Beasts</p>
+      <p>Storage: 4.74 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>
   </div>
@@ -866,7 +880,7 @@
       <img src="FIFA 22.webp" alt="FIFA 22">
     </div>
     <div class="info">
-      <p>FIFA 22 (تعليق عربي)</p>
+      <p>FIFA 22 - (تعليق عربي)</p>
       <p>Storage: 41.98 GB</p>
       <button class="select" onclick="selectGame(this)">Select</button>
     </div>

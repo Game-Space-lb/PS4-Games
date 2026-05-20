@@ -268,3 +268,64 @@ document.getElementById('searchBar').addEventListener('keyup', function() {
 window.addEventListener("load", function() {
   document.getElementById("preloader").style.display = "none";
 });
+
+
+
+// Below code is related to the x button that appears when you type in the search button
+
+const searchBar = document.getElementById('searchBar');
+const clearSearchBtn = document.getElementById('clearSearch');
+
+// Toggle the visibility of the (x) button and manage filtering
+searchBar.addEventListener('keyup', function() {
+  let query = this.value.toLowerCase().trim();
+  let games = document.querySelectorAll('.game');
+
+  // Show/hide clear button dynamically
+  if (query !== "") {
+    clearSearchBtn.classList.remove('hidden');
+  } else {
+    clearSearchBtn.classList.add('hidden');
+    
+    // If empty -> show all games
+    games.forEach(function(game) {
+      game.style.display = "inline-block";
+    });
+    return;
+  }
+
+  // --- Keep your existing game-filtering loop logic underneath here ---
+  games.forEach(function(game) {
+    let gameName = game.querySelector('.info p:nth-child(1)').textContent.toLowerCase();
+    let storageInfo = game.querySelector('.info p:nth-child(2)').textContent.toLowerCase();
+    let storageValue = parseFloat(storageInfo.split(" ")[1]);
+
+    let match = false;
+    if (isNaN(query)) {
+      if (gameName.includes(query)) match = true;
+    } else {
+      let numberQuery = parseFloat(query);
+      if (!isNaN(storageValue) && storageValue <= numberQuery) match = true;
+    }
+
+    if (match) {
+      game.style.display = "inline-block";
+    } else {
+      game.style.display = "none";
+    }
+  });
+});
+
+// Event listener to clear search input field when (x) is clicked
+clearSearchBtn.addEventListener('click', function() {
+  searchBar.value = ""; // Empty out input string
+  this.classList.add('hidden'); // Hide the close button again
+  
+  // Re-display all hidden items in your grid
+  let games = document.querySelectorAll('.game');
+  games.forEach(function(game) {
+    game.style.display = "inline-block";
+  });
+  
+  searchBar.focus(); // Keep the cursor active in the input field
+});
