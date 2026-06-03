@@ -281,6 +281,11 @@ searchBar.addEventListener('keyup', function() {
   let query = this.value.toLowerCase().trim();
   let games = document.querySelectorAll('.game');
 
+// Automatically selects all text when the search bar is clicked
+searchBar.addEventListener('click', function() {
+  this.select();
+});
+// ----------------------------------------
   // Show/hide clear button dynamically
   if (query !== "") {
     clearSearchBtn.classList.remove('hidden');
